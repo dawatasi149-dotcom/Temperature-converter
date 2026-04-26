@@ -1,0 +1,24 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+ body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+ }
+
+
+.box{ 
+    margin-top: 20px;
+    
+     justify-content: center;
+
+    align-items: center;
+    height: 250px;
+    width: 350px;
+    border: 2px solid black ;
+    border-radius: 20px;
+}
