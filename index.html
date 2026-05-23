@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="box">
-        <div class="content"></div>
-        
-        <div class="cel">Celsious
-            <input type="text" placeholder="0">
-        </div>
-        <div class="far"> Fahrenheit <input type="" placeholder="32"></div>
-        <div class="kel">Kelvin <input   type="text" id="kel" placeholder="273.15"></div>
-        <button>CONVERT</button>
-     </div>
-     
-     </div>
+   
+    <div class="container">
+        <h1>Enter a value </h1>
+        <input type="text" id="value" placeholder="100">
+        <span id="noValue"></span>        
+        <h3>select a unit to convert in </h3>
+        <input type="radio" name="unit" id="Celsius">Celsius
+        <input type="radio" name="unit" id="farenhiet">Farenhiet
+        <input type="radio" name="unit" id="kelvin">Kelvin
+        <span id="noUnit"></span>
+        <br>
+        <br>
+        <button id="convert">convert</button>
 
+
+        <p id="result"></p>
+
+    </div>
     
     <script src="script.js"></script>
 </body>
