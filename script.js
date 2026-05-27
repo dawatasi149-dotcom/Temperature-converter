@@ -1,6 +1,5 @@
-let celsius = document.getElementById('celsius');
+let celsius = document.getElementById('Celsius');
 let farenhiet  = document.getElementById('farenhiet');
-let kelvin = document.getElementById('kelvin');
 let result = document.getElementById('result');
 let noValue = document.getElementById('noValue');
 let noUnit = document.getElementById('noUnit');
@@ -18,18 +17,22 @@ function toKelvin(temp) {
 button.onclick = function () {
     let val = document.getElementById('value').value;
     let ans;
+     noValue.innerHTML = "";
+     noUnit.innerHTML = "";
+   
     if (val == '') {
         noValue.innerHTML = "*please provide a value *";
     }
     val = Number(val);
     if (celsius.checked) {
-        ans.toCelsius(val).toLocalestiring(undefined, { style: 'unit', unit: 'celsius',minimumFractonDigit:2,maximumFractonDigit });
+        ans=toCelsius(val).toLocaleString(undefined, { style: 'unit', unit: 'celsius',minimumFractionDigits:2,maximumFractonDigit:2 });
     }
-    else if (farenhiet.Checked) {
-        ans.Farenhiet(val).toLocalestiring(undefined, { style: 'unit', unit: 'farenhiet',minimumFractonDigit:2,maximumFractonDigit });
+    else if (farenhiet.checked) {
+        ans=toFarenhiet(val).toLocaleString(undefined, { style: 'unit', unit: 'fahrenheit',minimumFractionDigits:2,maximumFractonDigit:2 });
         
     }
     else {
-        noUnit.innerHTML = "*please select a unit for conversion";
+        noUnit.innerHTML = "*please select a unit for conversion*";
     }
+    result.innerHTML = ans;
 }
